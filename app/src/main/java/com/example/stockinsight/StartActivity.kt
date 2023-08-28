@@ -11,6 +11,9 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.GoogleAuthProvider
 
 class StartActivity : AppCompatActivity() {
+
+
+    // -----------------------------------
     lateinit var binding:ActivityStartBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +36,12 @@ class StartActivity : AppCompatActivity() {
                             Log.d("로그인","로그인 성공")
 
                         }else{
-                            Log.d("로그인","로그인 실패")
+                            Log.w("로그인","로그인 실패",task.exception)
                         }
 
                     }
             }catch(e:ApiException){
-                Log.d("로그인","로그인 실패")
+                Log.w("로그인","로그인 실패",e)
             }
         }
 

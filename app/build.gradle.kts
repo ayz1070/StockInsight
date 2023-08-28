@@ -43,6 +43,11 @@ android {
 }
 
 dependencies {
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.google.cod.gson:gson:2.8.6")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
     implementation("androidx.multidex:multidex:2.0.1")
     // google login
     implementation("com.google.android.gms:play-services-auth:20.6.0")

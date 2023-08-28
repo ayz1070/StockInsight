@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.stockinsight.databinding.ItemBookmarkBinding
-import com.example.stockinsight.model.StockModel
+import com.example.stockinsight.model.Stock
 
 
 class BookmarkViewHolder(val binding:ItemBookmarkBinding): RecyclerView.ViewHolder(binding.root)
-class BookmarkAdapter(val stocks:MutableList<StockModel>):RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class BookmarkAdapter(val stocks:MutableList<Stock>):RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
     = BookmarkViewHolder(ItemBookmarkBinding.inflate(LayoutInflater.from(parent.context)))
     override fun getItemCount(): Int = stocks.size

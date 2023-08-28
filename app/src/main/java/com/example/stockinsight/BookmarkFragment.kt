@@ -1,6 +1,5 @@
 package com.example.stockinsight
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.stockinsight.adapter.BookmarkAdapter
 import com.example.stockinsight.databinding.FragmentBookmarkBinding
-import com.example.stockinsight.model.StockModel
+import com.example.stockinsight.model.Stock
 
 
 class BookmarkFragment : Fragment() {
@@ -25,9 +24,9 @@ class BookmarkFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding:FragmentBookmarkBinding = FragmentBookmarkBinding.inflate(inflater,container,false)
-        val stocks = mutableListOf<StockModel>()
-        stocks.add(StockModel("삼성전자","78000","3%"))
-        stocks.add(StockModel("sk하이닉스","90000","5%"))
+        val stocks = mutableListOf<Stock>()
+        stocks.add(Stock("삼성전자","78000","3%"))
+        stocks.add(Stock("sk하이닉스","90000","5%"))
 
         val adapter = BookmarkAdapter(stocks)
         val layoutManager = LinearLayoutManager(activity)
